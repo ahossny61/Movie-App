@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.seeAll"
+    android:background="#000">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/seeAll_seipToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_seeAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+   <TextView
+       android:text="No Films in your favourity"
+       android:textColor="#fff"
+       android:textSize="17sp"
+       android:textStyle="bold"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/seeAll_noItems"
+       android:layout_centerVertical="true"
+       android:layout_centerHorizontal="true"/>
+    <ProgressBar
+        android:id="@+id/prgreeBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="#ed3600"
+        />
+    <TextView
+        android:id="@+id/seeAll_internet_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:text="No internet connection"/>
+    />
+    <TextView
+        android:id="@+id/seeAll_internet_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/seeAll_internet_text"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:text="Swip down to refresh"/>
+    />
+</RelativeLayout>
